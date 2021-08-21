@@ -8,17 +8,26 @@ import {
 } from 'react-router-dom'
 import routes from '../src/router'
 
+import {
+  ConfigProvider
+} from 'zarm'
+import zhCN from 'zarm/lib/config-provider/locale/zh_CN'
+import 'zarm/dist/zarm.css'
+
+
 function App() {
   const [count, setCount] = useState(0)
 
   return <Router>
-    <Switch>
-      {
-        routes.map(route => <Route exact key = {route.path} path={route.path}>
-          <route.component />
-        </Route>)
-      }
-    </Switch>
+    <ConfigProvider primaryColor={'#000000'} locale={zhCN}>
+      <Switch>
+        {
+          routes.map(route => <Route exact key = {route.path} path={route.path}>
+            <route.component />
+          </Route>)
+        }
+      </Switch>
+    </ConfigProvider>
   </Router>
 }
 
