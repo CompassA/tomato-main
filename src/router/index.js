@@ -1,5 +1,5 @@
-import Index from '../container/Index'
-import About from '../container/About/About'
+import Index from '@/container/Index'
+import About from '@/container/About/About'
 
 const routes = [
     {

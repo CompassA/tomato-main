@@ -6,7 +6,7 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
-import routes from '../src/router'
+import routes from '@/router'
 
 import {
   ConfigProvider
