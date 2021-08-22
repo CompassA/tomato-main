@@ -8,6 +8,8 @@ import {
 } from 'react-router-dom'
 import routes from '@/router'
 
+import TomatoTabBar from '@/components/TomatoTabBar'
+
 import {
   ConfigProvider
 } from 'zarm'
@@ -27,6 +29,8 @@ function App() {
         }
       </Switch>
     </ConfigProvider>
+
+    <TomatoTabBar showTab={true}/>
   </Router>
 }
 
